@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Array{
+public static void main(String[] args)
+{
+Scanner sc = new Scanner(System.in);
+ int[] arr; int n,i;
+ arr = new int[10];
+ System.out.println("enter values = ");
+ for(i=0; i<10; i++)
+ {
+ arr[i] = sc.nextInt();
+ }
+ System.out.println("enter no u want to search = ");
+ n = sc.nextInt();
+
+ for(i=0; i<10; i++){
+ if(n == arr[i]){
+ System.out.println("index no = " +i);
+ System.out.println("element = " +arr[i]);
+ }
+ }
+ }}

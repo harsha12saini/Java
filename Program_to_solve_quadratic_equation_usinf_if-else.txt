@@ -1,0 +1,33 @@
+import java.lang.Math;
+import java.util.Scanner;
+public class quadratic
+{
+ public static void main (String args[])
+ {
+ double a,b,c,d;
+ Scanner sc = new Scanner(System.in);
+ System.out.println("enter the value of a");
+ a=sc.nextDouble();
+ System.out.println("enter the value of b");
+ b=sc.nextDouble();
+ System.out.println("enter the value of c");
+ c=sc.nextDouble();
+ d=b*b-(4.0*a*c);
+ if (d>0)
+ {
+ double x1=(-b-Math.sqrt(d))/(2.0*a);
+ double x2=(-b+Math.sqrt(d))/(2.0*a);
+ System.out.println("the value of roots are"+x1+"and"+x2);
+ }
+ else if (d==0.0)
+ {
+ double x1=-b/2.0*a;
+ System.out.println("the value of roots are equal and is equal to"+x1);
+ }
+ else
+ {
+ System.out.println ("no real roots");
+ }
+
+ }
+}
