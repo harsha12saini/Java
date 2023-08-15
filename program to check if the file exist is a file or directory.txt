@@ -1,0 +1,15 @@
+import java.io.*;
+Student Name and Roll Number: HARSHA 22CSU081
+Semester /Section: 2
+ND
+Date:
+Faculty Signature:
+public class first {
+public static void main(String args[])
+{
+File f = new File("F:\\Program.txt");
+if (f.exists())
+System.out.println("Exists");
+else
+System.out.println("Does not Exists");
+} }

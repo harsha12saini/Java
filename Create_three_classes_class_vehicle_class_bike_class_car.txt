@@ -1,0 +1,34 @@
+import java.util.*;
+class vehicle{
+public void display(){
+System.out.println("This is a vehicle");
+} }
+class car extends vehicle{
+public void displayCar(){
+System.out.println("This is a car");
+}}
+class bike extends vehicle{
+public void displayBike(){
+System.out.println("This is a bike");
+}}
+class inherit{
+public static void main(String args[]){
+Scanner sc = new Scanner(System.in);
+int n;
+System.out.println("enter no of tyres in n - ");
+n = sc.nextInt();
+switch(n){
+case 2: 
+bike obj1 = new bike();
+ obj1.displayBike();
+ break;
+ case 4:
+ car obj2 = new car();
+ obj2.displayCar();
+ break;
+ default:
+ vehicle obj3 = new vehicle();
+ obj3.display();
+ break;
+}}
+}

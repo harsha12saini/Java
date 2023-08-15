@@ -1,0 +1,36 @@
+import java.util.Scanner; 
+class Box{
+float width, height, depth, volume;
+ void box(float width, float height, float depth){
+ this.width= width;
+ this.height= height;
+ this.depth= depth;
+}
+void vol(){
+volume= width* height* depth;
+System.out.println("Volume = " +volume);
+}}
+class BoxWeight extends Box{
+float weight;
+public void set(float we){
+weight=we;
+System.out.println("Weight = " +weight);
+}}
+class Main{
+public static void main(String args[]){
+int h,w,d,we;
+Scanner ob= new Scanner(System.in);
+Box obj1 = new Box();
+BoxWeight obj2 = new BoxWeight();
+System.out.print("Enter height: ");
+h = ob.nextInt();
+System.out.print("Enter width: ");
+w = ob.nextInt();
+System.out.print("Enter depth: ");
+d = ob.nextInt();
+System.out.print("Enter weight: ");
+we = ob.nextInt();
+obj1.box(w,h,d);
+obj1.vol();
+obj2.set(we);
+}}

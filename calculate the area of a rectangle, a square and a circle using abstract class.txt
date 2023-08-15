@@ -1,0 +1,26 @@
+abstract class Shape{
+public abstract int RectangleArea(int l,int b);
+public abstract int SquareArea( int Side);
+public abstract int CircleArea(int Radius);
+abstract void print();
+}
+public class Area2 extends Shape{
+public int RectangleArea(int len,int bre){
+return len*bre;
+}
+public int SquareArea(int s){
+return s*s;
+}
+public int CircleArea(int r){
+return (22*r*r)/(7);
+}
+ void print(){
+ System.out.println("Area of Shapes");
+ }
+public static void main(String args[]){
+Shape S=new Area2();
+System.out.println("Area of Rectangle:"+S.RectangleArea(3,4));
+System.out.println("Area of Square:"+S.SquareArea(2));
+System.out.println("Area of Circle:"+S.CircleArea(7));
+S.print();
+} }

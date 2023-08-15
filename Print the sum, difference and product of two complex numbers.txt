@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class program{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+System.out.println("enter real num1 =");
+int num1=sc.nextInt();
+System.out.println(" ");
+System.out.println("enter imaginary part of num1 = ");
+int num2 = sc.nextInt();
+System.out.println(" ");
+System.out.println("enter real num2 =");
+int num3=sc.nextInt();
+System.out.println(" ");
+System.out.println("enter imaginary part of num2 = ");
+int num4 = sc.nextInt();
+System.out.println(" ");
+complex obj = new complex(num1,num3,num2,num4);
+obj.sum(num1,num3,num2,num4);
+obj.difference(num1,num3,num2,num4);
+ sc.close();
+}}
+class complex{
+int x,y,p,q;
+complex(int x, int y, int p, int q){
+this.x = x;
+this.y = y;
+this.p = p;
+this.q = q;
+}
+public void sum(int x, int y, int p, int q){
+int a = x+y;
+int b = p+q;
+System.out.println("sum = "+(a+"+"+b+"i"));
+}
+public void difference(int x, int y, int p, int q){
+int a = x-y;
+int b = p-q;
+System.out.println("difference = "+(a+"+"+b+"i"));
+}}

@@ -1,0 +1,11 @@
+package exercises;
+package exercises.java;
+public class PackageDemo {
+ public void display() {
+ System.out.println("PackageDemo executed");
+ } }
+public class PackageDemoDriver {
+ public static void main(String[] args) {
+ PackageDemo pd = new PackageDemo();
+ pd.display();
+ } }

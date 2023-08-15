@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class rect
+{ 
+ int l,b;
+ static Scanner ob = new Scanner(System.in);
+ rect(int x, int y)
+ {
+ l= x;
+ b= y;
+ }
+ public int ar()
+ {
+ return l*b;
+ }
+ public static void main(String args[])
+ { int x,y;
+ System.out.print("Enter Length & Breadth: ");
+ x= ob.nextInt();
+ y= ob.nextInt();
+ rect A2= new rect(x, y);
+ System.out.print("Area: "+ A2.ar());
+ } }

@@ -1,0 +1,9 @@
+import exercises.java.PackageDemo;
+public class Main {
+ public static void main(String[] args) {
+ // Creating an object of PackageDemo class
+ PackageDemo pd = new PackageDemo();
+ 
+ // Calling the display() function of PackageDemo class
+ pd.display();
+ } }

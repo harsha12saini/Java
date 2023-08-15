@@ -1,0 +1,44 @@
+public interface GeometricObject {
+ double getPerimeter();
+ double getArea();
+}
+public interface Resizable {
+ void resize(int percent);
+}
+public class Circle implements GeometricObject {
+ protected double radius;
+ public Circle(double radius) {
+this.radius = radius;
+ }
+ @Override
+ public double getPerimeter() {
+ return 2 * Math.PI * radius;
+ }
+ @Override
+ public double getArea() {
+ return Math.PI * radius * radius;
+ } }
+public class ResizableCircle extends Circle implements Resizable {
+ public ResizableCircle(double radius) {
+ super(radius);
+ }
+ @Override
+ public void resize(int percent) {
+ radius *= (1.0 + percent / 100.0);
+ } }
+public class Main {
+ public static void main(String[] args) {
+ Circle circle = new Circle(5);
+System.out.println("Circle perimeter: " + circle.getPerimeter());
+System.out.println("Circle area: " + circle.getArea());
+ResizableCircleresizableCircle = new ResizableCircle(5);
+System.out.println("ResizableCircle perimeter: " + 
+resizableCircle.getPerimeter());
+System.out.println("ResizableCircle area: " + resizableCircle.getArea());
+resizableCircle.resize(50);
+System.out.println("ResizableCircle resized by 50%.");
+System.out.println("New ResizableCircle perimeter: " + 
+resizableCircle.getPerimeter());
+System.out.println("New ResizableCircle area: " + resizableCircle.getArea());
+ }
+}
